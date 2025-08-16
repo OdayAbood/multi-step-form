@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="master.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <div class="steps">
+                <img src="./photo/bg-sidebar-desktop.svg" alt="">
+                <div class="step">
+                    <p class="active">1</p>
+                    <div class="stepinfo">
+                        <div class="number">STEP 1</div>
+                        <div class="tittle">YOUR INFO</div>
+                    </div>
+                </div>
+                <div class="step">
+                    <p>2</p>
+                    <div class="stepinfo">
+                        <div class="number">STEP 2</div>
+                        <div class="tittle">SELECT PLAN</div>
+                    </div>
+                </div>
+                <div class="step">
+                    <p>3</p>
+                    <div class="stepinfo">
+                        <div class="number">STEP 3</div>
+                        <div class="tittle">ADD-ONS</div>
+                    </div>
+                </div>
+                <div class="step">
+                    <p>4</p>
+                    <div class="stepinfo">
+                        <div class="number">STEP 4</div>
+                        <div class="tittle">SUMMARY</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="cont info show">
+                <h3>Personal Info</h3>
+                <p>Please provide your name,email address,and phone number</p>
+                <form class="form">
+                    <div class="item">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" placeholder="e.g Stephen King">
+                    </div>
+                    <div class="item">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" placeholder="e.g stephaniKing@lorem.com">
+                    </div>
+                    <div class="item">
+                        <label for="phone">Phone</label>
+                        <input type="text" id="phone" placeholder="e.g +9639988776655">
+                    </div>
+                    </form>
+            </div>
+            <div class="cont plan ">
+                <h3>Select Your Plan</h3>
+                <p>You have the option of monthly or yearlt billing</p>
+                <div class="items">
+                    <div class="item">
+                        <img src="./photo/icon-arcade.svg" >
+                        <div class="des">
+                            <h3>Arcade</h3>
+                            <p class="price">$9/mo</p>
+                            <p class="yearly"></p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="./photo/icon-advanced.svg" >
+                        <div class="des">
+                            <h3>Advance</h3>
+                            <p class="price">$12/mo</p>
+                            <p class="yearly"></p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="./photo/icon-pro.svg" >
+                        <div class="des">
+                            <h3>Arcade</h3>
+                            <p class="price">$15/mo</p>
+                            <p class="yearly"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="billing">
+                    <h4 class="active">Monthly</h4>
+                    <div class="switch">
+                        <span></span>
+                    </div>
+                    <h4>Yearly</h4>
+                </div>
+            </div>
+            <div class="cont add-ons ">
+                <h3>Pick add-ons</h3>
+                <p>Add ons help enhance your gaming expeirience</p>
+                <ul>
+                    <li>
+                        <input type="checkbox" id="">
+                        <div class="box">
+                            <div class="desc">
+                                <h3>Online service</h3>
+                                <p>Access to multiplayer games</p>
+                            </div>
+                            <span>+$1/mo</span>
+                        </div>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="">
+                        <div class="box">
+                            <div class="desc">
+                                <h3>Laeger storage</h3>
+                                <p>Extra 1TB of cloud server</p>
+                            </div>
+                            <span>+$2/mo</span>
+                        </div>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="">
+                        <div class="box">
+                            <div class="desc">
+                                <h3>Customizable profile</h3>
+                                <p>Custom theme on your profile</p>
+                            </div>
+                            <span>+$2/mo</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="cont summary ">
+                <h3>Finishing Up</h3>
+                <p>Double check everything looks before confirming</p>
+                <div class="box-choice">
+                    <div class="item">
+                        <div class="plan-choice"></div>
+                        <a href="#">change</a>
+                    </div>
+                    <div class="line"></div>
+                    <div class="item">
+                        <div class="item1"></div>
+                    </div>
+                    <div class="total"></div>
+                </div>
+            </div>
+            <div class="buttons">
+                <button class="back">Go Back</button>
+                <button class="next">Next Step</button>
+            </div>
+        </div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>

@@ -1,0 +1,433 @@
+*{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --first-blue:hsl(213,96%,18%);
+    --second-blue:hsl(228,100%,84%);
+    --third-blue:hsl(206,94%,87%);
+    --red:hsl(354,84%,57%);
+    --grey:hsl(231,11%,63%);
+    --purple:hsl(243,100%,62%);
+}
+body{
+    background:linear-gradient(180deg , #ebf2fc 0%,#eef8f9 100% );
+    height: 100vh;
+}
+.container{
+    display: flex;  
+    position: absolute;
+    max-width: 100%;
+    justify-content: space-between;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    box-shadow: 1px 3px 18px 3px #0000009e;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.left{
+    width: 250px;
+    height: 500px;
+    display: flex
+;
+    justify-content: center;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+.left .steps{
+    width:100%;
+    height: 100%;
+    position: relative;
+}
+.left .steps img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    border-radius: 10px;
+}
+.left .steps .step{
+    display: flex
+    ;
+        justify-content: space-between;
+        align-items: center;
+        height: 100px;
+        width: 150px;
+        transform: translateX(20px);
+}
+.left .steps .step p{
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    transition: 0.5s;
+    color: white;
+}
+.left .steps .step p::after{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 3px solid white;
+    left: 50%;
+    top: 50%;
+    z-index: -1;
+    transform: translate(-50%,-50%);
+    transition: 0.5s;
+}
+.left .steps .step p.active{
+color: white;
+}
+.left .steps .step p.active::after{
+background-color: var(--third-blue);
+border: 3px solid white;
+}
+.left .steps .step .stepinfo{
+    width: 120px;
+    position: relative;
+}
+.left .steps .step .stepinfo .number{
+    margin-bottom: 15px;
+    font-size: 11px;
+    font-weight: bold;
+    color: var(--grey);
+}
+.left .steps .step .stepinfo .tittle{
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--first-blue);
+}
+.right{
+    margin-top: 50px;
+    width: 500px;
+    height: 500px;
+    margin-left: 25px;
+    position: relative;
+    max-width: 100%
+}
+.right .cont{
+    width: 500px;
+    height: 450px;
+    transform: translatex(100%);
+    position: absolute;
+    max-width: 100%;
+    transition: 0.5s;
+}
+.right .show{
+    transform: translateX(0) !important;
+}
+.right .cont h3{
+    color: var(--first-blue);
+    letter-spacing: 1px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.right .cont p {
+    color: var(--grey);
+}
+.right .info .form{
+    margin-top: 25px;
+}
+.right .info .form .item:not(:last-child){
+    margin-bottom: 20px;
+}
+.right .info .form label{
+    color: var(--first-blue);
+    display: block;
+    margin-bottom: 10px;
+}
+.right .info .form input{
+    width: 400px;
+    height: 40px;
+    outline: none;
+    border: 1px solid var(--grey) ;
+    border-radius: 2px;
+}
+.right .info .form input::placeholder{
+    color: var(--grey);
+    position: relative;
+    left: 10px;
+    font-weight: bold;
+
+}
+.right .plan .items{
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.right .plan .items .item{
+    width: 150px;
+    height: 250px;
+    border: 2px solid var(--first-blue);
+    border-radius: 5px;
+    display: flex
+;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    transition: 0.5s;
+}
+.right .plan .items .item.active{
+    border: 2px solid var(--red);
+}
+.right .plan .items .item img{
+    margin-top: 10px;
+}
+.right .plan .items .item .des p:first-child{
+    transition: 0.5s;
+}
+.right .plan .items .item .des p:last-child{
+    color: var(--first-blue);
+    font-weight: bold;
+    transition: 0.5s;
+}
+.right .box-choice{
+    margin-top: 15px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #eef8f9;
+    height: 200px;
+    position: relative;
+}
+.right .box-choice .line{
+    position: absolute;
+    width: 90%;
+    height: 2px;
+    background-color: var(--second-blue);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.right .plan .billing{
+    width: 80%;
+    margin: auto;
+    background-color: hsl(231deg 11% 63% / 43%);
+    margin-top: 20px;
+    border-radius: 5px;
+    display: flex
+;
+    height: 35px;
+    align-items: center;
+    justify-content: space-around;
+}
+.right .plan .billing h4{
+    color: var(--grey);
+    transition: 0.5s;
+}
+.right .plan .billing h4.active{
+    color: var(--first-blue);
+}
+.right .plan .billing .switch{
+    width: 40px;
+    height: 15px;
+    background: var(--first-blue);
+    border-radius: 10px;
+    position: relative;
+}
+.right .plan .billing .switch span{
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: white;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 3px
+}
+.right .plan .billing .switch.move span{
+   left: 25px !important;
+}
+.right .add-ons ul{
+    margin-top: 15px;
+}
+.right .add-ons ul li{
+    display: flex
+    ;
+        width: 80%;
+        height: 50px;
+        border: 2px solid var(--grey);
+}
+.right .add-ons ul li input{
+    margin: 15px;
+}
+.right .add-ons ul li input:checked{
+    color: red;
+}
+.right .add-ons ul li:not(:last-child){
+    margin-bottom: 20px;
+}
+.right .add-ons ul li .box{
+    display: flex
+;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.right .add-ons ul li .box .desc{
+    margin-left: 30px;
+    width: 200px;
+}
+.right .add-ons ul li .box span{
+    font-weight: bold;
+    color: var(--purple);
+    position: absolute;
+    transform: translateX(100%);
+    left: 100%;
+}
+.right .summary .box-choice .item{
+    width: 100%;
+    height: 50%;
+    margin-left: 25px;
+    position: relative;
+}
+.right .summary .box-choice .item a{
+    position: absolute;
+    top: 75%;
+    color: var(--first-blue);
+    transition: 0.5s;
+    left: 15%;
+}
+.right .summary .box-choice .item .des {
+    height: 50px;
+    display: flex
+;
+    justify-content: space-around;
+    transform: translateY(15px);
+}
+.right .summary .box-choice .item a:hover{
+    color: var(--third-blue);
+}
+.right .summary .box-choice .total {
+    width: 100%;
+    height: 40%;
+    border-radius: 20px;
+    margin-top: 25px;
+    position: relative;
+    background-color: hsl(206deg 94% 87% / 32%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--red);
+}
+.right.thanks{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 100;
+    pointer-events: none;
+    background-color: red;
+}
+.right .buttons{
+    width: 500px;
+    display: flex
+;
+    justify-content: space-between;
+    height: 50px;
+    align-items: center;
+    position: absolute;
+    max-width: 100%;
+    top: 90%;
+    right: 10px;  width: 500px;
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    align-items: center;
+}
+.right .buttons .next , 
+.right .buttons .back{
+    font-weight: bold;
+    width: 85px;
+    height: 30px;
+    border: none;
+    letter-spacing: 2px;
+    color: white;
+    border-radius: 3px;
+    background-color: var(--first-blue);
+    box-shadow: 1px -1px 5px 2px black;
+}
+.right .buttons .back{
+    pointer-events:none;
+    opacity: 0.5;
+}
+.box{
+display: flex;
+align-items: center;
+position: relative;
+
+}
+.box span {
+    font-weight: bold;
+    color: var(--purple);
+    position: absolute;
+    transform: translateX(100%);
+    left: 50%;
+}
+/* @media (max-width:767px) {
+    .container{
+        display: block;
+        left: 0;
+        top: 0;
+        transform: translate(0px, 0px);
+        height: 100vh;
+    }
+    .left{
+        flex-direction: column;
+    margin: 0;
+    width: 100%;
+    height: 150px;
+    }
+    .left .steps{
+        display: flex;
+    justify-content: space-around;
+    }
+    .left .steps .step {
+        width:50px;
+    }
+    .left .steps .step .stepinfo {
+        display: none;
+    }
+    .right{
+        border-radius: 75px;
+    margin: 0;
+    margin-top: -30px;
+    }
+    .right .cont{
+        transform: translate(25px, 50px) !important;
+    }
+    .right .info .form input{
+        width: 300px;
+    }
+
+    .right .add-ons ul li .box span{
+        left:75%;
+    }
+    .right .plan .items .item{
+        flex-direction: row;
+        height: auto;
+        margin-top: 10px;
+        justify-content: space-around;
+        width: 80%;
+        margin-right: auto;
+    }
+    .right .add-ons ul li .desc{
+        margin-left: 0 !important;
+    }
+    .right .plan .billing {
+        width: 80%;
+        left: 50%;
+        position: absolute;
+        transform: translateX(-57%);}
+
+    .right .buttons{
+        width: 300px;
+        left: 50%;
+        transform: translate(-57%, -50px);
+        right: 0;
+    }
+} */
